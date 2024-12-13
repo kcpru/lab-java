@@ -32,6 +32,18 @@ public class ShapeController {
         return shapeService.getAllTriangles();
     }
 
+    @GetMapping
+    @RequestMapping("api/rectangle/{id}")
+    public Rectangle getRectangle(@PathVariable Long id) {
+        return shapeService.getRectangle(id);
+    }
+
+    @GetMapping
+    @RequestMapping("api/triangle/{id}")
+    public Triangle getTriangle(@PathVariable Long id) {
+        return shapeService.getTriangle(id);
+    }
+
     @PutMapping
     @RequestMapping("api/rectangle/add")
     public Long addRectangle(@RequestBody Rectangle rectangle) {

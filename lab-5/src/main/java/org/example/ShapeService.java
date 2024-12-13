@@ -34,6 +34,14 @@ public class ShapeService {
         return triangleRepository.findAll();
     }
 
+    public Rectangle getRectangle(Long id) {
+        return rectangleRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("Rectangle not found"));
+    }
+
+    public Triangle getTriangle(Long id) {
+        return triangleRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("Triangle not found"));
+    }
+
     public Long addRectangle(Rectangle rectangle) {
         return rectangleRepository.save(rectangle).getId();
     }
