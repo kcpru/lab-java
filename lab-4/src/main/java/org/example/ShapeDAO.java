@@ -36,4 +36,17 @@ public class ShapeDAO {
             return session.createQuery("from Triangle", Triangle.class).list();
         }
     }
+
+    public void deleteAllShapes() {
+        Transaction transaction = null;
+        try (Session session = sessionFactory.openSession()) {
+            transaction = session.beginTransaction();
+            session.createQuery("delete from Rectangle").executeUpdate();
+            session.createQuery("delete from Triangle").executeUpdate();
+            transaction.commit();
+        } catch (Exception e) {
+            if (transaction != null) transaction.rollback();
+            e.printStackTrace();
+        }
+    }
 }

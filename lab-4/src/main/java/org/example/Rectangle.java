@@ -44,17 +44,4 @@ public class Rectangle extends Shape {
     public String getColorDescription() {
         return super.getColorDescription();
     }
-
-//    @Override
-//    public void draw() {
-//        int w = (int) Math.round(getWidth());
-//        int h = (int) Math.round(getHeight());
-//
-//        for (int i = 0; i < h; i++) {
-//            for (int j = 0; j < w; j++) {
-//                System.out.print(getAnsiColor() + "*" + "\u001B[0m");
-//            }
-//            System.out.println();
-//        }
-//    }
 }

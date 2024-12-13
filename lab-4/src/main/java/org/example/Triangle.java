@@ -49,20 +49,4 @@ public class Triangle extends Shape {
     public double getSideC() {
         return sideC;
     }
-
-//    @Override
-//    public void draw() {
-//        double a = getSideA();
-//        double b = getSideB();
-//
-//        int base = (int) Math.round(a);
-//        int height = (int) Math.round(b);
-//
-//        int rows = Math.max(base, height);
-//        for (int i = 1; i <= rows; i++) {
-//            String spaces = " ".repeat(rows - i);
-//            String stars = "*".repeat(i * 2 - 1);
-//            System.out.println(getAnsiColor() + spaces + stars + "\u001B[0m");
-//        }
-//    }
 }

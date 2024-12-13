@@ -28,14 +28,6 @@ public class TriangleTest {
     }
 
     @Test
-    public void testTriangleDraw() {
-        Color green = new Color(0, 255, 0);
-        Triangle triangle = new Triangle(3.0, 4.0, 5.0, green);
-
-        triangle.draw();
-    }
-
-    @Test
     public void testTriangleAnsiColor() {
         Color green = new Color(0, 255, 0);
         Triangle triangle = new Triangle(3.0, 4.0, 5.0, green);
